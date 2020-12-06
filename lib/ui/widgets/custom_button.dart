@@ -12,9 +12,9 @@ class CustomButton extends StatelessWidget {
       style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all<Color>(color),
           padding: MaterialStateProperty.all(
-              EdgeInsets.symmetric(horizontal: 20, vertical: 5))),
-      child: Icon(iconData, size: 40),
+              const EdgeInsets.symmetric(horizontal: 20, vertical: 5))),
       onPressed: function,
+      child: Icon(iconData, size: 40),
     );
   }
 }

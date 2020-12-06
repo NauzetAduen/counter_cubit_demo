@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../cubit/counter_cubit.dart';
-import '../../cubit/event_cubit.dart';
 import '../widgets/tabbed_appbar.dart';
 import 'events_page.dart';
 import 'home_page.dart';

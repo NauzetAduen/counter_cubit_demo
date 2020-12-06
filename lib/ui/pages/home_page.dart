@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
         ),
         Text(
           context.watch<CounterCubit>().state.toString(),
-          style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
         ),
       ],
     );
@@ -43,15 +43,15 @@ class HomePage extends StatelessWidget {
 
 void increment(BuildContext context) {
   context.read<CounterCubit>().increment();
-  context.read<EventCubit>().add(Event(DateTime.now(), EventType.Increase));
+  context.read<EventCubit>().add(Event(DateTime.now(), EventType.increase));
 }
 
 void decrement(BuildContext context) {
   context.read<CounterCubit>().decrement();
-  context.read<EventCubit>().add(Event(DateTime.now(), EventType.Decrease));
+  context.read<EventCubit>().add(Event(DateTime.now(), EventType.decrease));
 }
 
 void reset(BuildContext context) {
   context.read<CounterCubit>().reset();
-  context.read<EventCubit>().add(Event(DateTime.now(), EventType.Reset));
+  context.read<EventCubit>().add(Event(DateTime.now(), EventType.reset));
 }

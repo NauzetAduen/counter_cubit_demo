@@ -5,4 +5,4 @@ class Event {
   Event(this.date, this.eventType);
 }
 
-enum EventType { Increase, Decrease, Reset }
+enum EventType { increase, decrease, reset }
