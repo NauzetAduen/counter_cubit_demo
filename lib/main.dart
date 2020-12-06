@@ -1,5 +1,9 @@
-import 'package:counter_cubit_demo/ui/landing_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'cubit/counter_cubit.dart';
+import 'cubit/event_cubit.dart';
+import 'ui/pages/landing_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,6 +18,13 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.indigo,
             accentColor: Colors.redAccent,
             disabledColor: Colors.grey),
-        home: LandingPage());
+        home: MultiBlocProvider(providers: [
+          BlocProvider<CounterCubit>(
+            create: (context) => CounterCubit(),
+          ),
+          BlocProvider<EventCubit>(
+            create: (context) => EventCubit(),
+          ),
+        ], child: LandingPage()));
   }
 }

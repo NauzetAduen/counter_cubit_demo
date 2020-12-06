@@ -9,6 +9,7 @@ environment:
 
 dependencies:
   flutter_bloc: ^6.1.1
+  intl:
   flutter:
     sdk: flutter
 
