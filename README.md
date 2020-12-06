@@ -9,3 +9,4 @@ A new Flutter project to test cubits with the initial counter app.
 - Three times of buttons:
     - Increase, decrease, reset.
 - Uses cubits as a state management.
+- We'll have a tab to choose between Home and Events pages.
